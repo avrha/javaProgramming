@@ -1,3 +1,4 @@
+//An example of a while loop
 public class whileLoop {
 	public static void main(String[] args) {
 		//Problem 1
