@@ -9,19 +9,21 @@ public class Hotel {
     System.out.print("How many floors in the hotel? ");
     int floors = numInput.nextInt();
     double totalRooms = 0, totalFilledRooms = 0;
-
+    
     //ensuring user enter value less than 1
-    if (floors < 1) {
-      System.out.print("Invalid input");
+    while(floors < 1){
+      System.out.print("Invalid input, try again: ");
+      floors = numInput.nextInt();
     }
 
-    for(int i = 0; i < floors; i++){
+    //going through each floor
+    for(int i = 1; i <= floors; i++){
       System.out.print("How many rooms on floor " +i+"? ");
       double tempRooms = numInput.nextInt();
 
       //ensursing user enters value greater than 10
       while (tempRooms < 10){
-        System.out.println("Please enter a number no less than 10 ");
+        System.out.print("Please enter a number no less than 10: ");
         tempRooms = numInput.nextInt();
       }
 
@@ -29,8 +31,8 @@ public class Hotel {
       double tempFilledRooms = numInput.nextInt();
 
       //ensuring user enters value less than tempRoom
-      while(tempFilledRooms > tempRooms){
-        System.out.println("Please enter a number less than then number of the rooms");
+      while(tempFilledRooms > tempRooms || tempFilledRooms < 0){
+        System.out.print("Invalid input, try again: ");
         tempFilledRooms = numInput.nextInt();
       }
 
@@ -40,9 +42,12 @@ public class Hotel {
 
       //Calculating occupancy rate on the floor
       double tempOccupancy = tempFilledRooms/ tempRooms;
-      //TODO - Format properly
-      System.out.println(tempOccupancy +" is the occupancy rate on floor " +i);
     }
-    //TODO - Caluculate overall occupancy rate
+    //Final output
+    double totalOccupanyRate;
+    totalOccupanyRate = totalFilledRooms / totalRooms;
+    System.out.printf("The hotel has a total of %2.0f number of rooms.\n", totalRooms);
+    System.out.printf("The hotel has a total of %2.0f number of filled rooms.\n", totalFilledRooms);
+    System.out.printf("The total occupancy rate is %3.2f percent.\n", totalOccupanyRate);
   }
 }
