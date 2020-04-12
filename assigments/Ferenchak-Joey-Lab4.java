@@ -27,9 +27,6 @@ public class lab4{
         //write prime number to output.txt
         file.write(String.valueOf(i) + "\n");
       }
-      else {
-        //do nothing
-      }
     }
     file.close();
   }
