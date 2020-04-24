@@ -1,7 +1,6 @@
 public class insertionSort {
     public static void main(String[] args){
-        //int myArray[] = {1, 3, 2, 10, 7, 6, 9, 5, 8, 4};
-        int myArray[] = {1,7,9,8};
+        int myArray[] = {1, 3, 2, 10, 7, 6, 9, 5, 8, 4};
 
         //print out the unorganized array
         for(int element : myArray)
@@ -15,7 +14,7 @@ public class insertionSort {
 
             while(j >= 0 && myArray[j] > key){
                 myArray[j + 1] = myArray[j];
-                j  = j - 1;
+                j--;
             }
             myArray[j + 1] = key;
         }
