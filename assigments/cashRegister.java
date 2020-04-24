@@ -4,8 +4,7 @@
  * Description: Simple arithmetic calculations.
  */
 
-import java.lang. *;
-public class lab1
+public class cashRegister
 {
     // Your program begins with a call to main().
     // Prints "Hello, World" to the terminal window.

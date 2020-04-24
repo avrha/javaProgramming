@@ -1,7 +1,6 @@
-import java.io.Console;
 import java.util.Scanner;
 
-public class SavingAccount {
+public class savingAccount {
   //variables
   double annualInterest = 0;
   double totalInterest = 0;
@@ -38,7 +37,7 @@ public class SavingAccount {
   }
 
   //constructor
-  public SavingAccount(Double num1, Double num2) {
+  public savingAccount(Double num1, Double num2) {
     annualInterest = num1;
     balance = num2;
     
@@ -48,7 +47,7 @@ public class SavingAccount {
   public static void main(String []args){
     Scanner numInput = new Scanner(System.in);
     System.out.print("Enter the annual interest rate & balance: ");
-    SavingAccount obj1 = new SavingAccount(numInput.nextDouble(), numInput.nextDouble());
+    savingAccount obj1 = new savingAccount(numInput.nextDouble(), numInput.nextDouble());
 
     System.out.print("Enter the number of months that have passed since the account was established: ");
     int numMonths = numInput.nextInt();
@@ -64,5 +63,6 @@ public class SavingAccount {
       obj1.addInterest(monthlyInterest);
     }
     obj1.output();
+    numInput.close();
   }
 }

@@ -1,7 +1,6 @@
-import java.io.Console;
 import java.util.Scanner;
 
-public class hw2 {
+public class rateCalc {
   public static void main(String[] args) {
 
     //Used to read integers from console
@@ -184,5 +183,6 @@ public class hw2 {
   {
     System.out.println("Invalid input");
   }
+  numInput.close();
 }
 }

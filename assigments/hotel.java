@@ -1,7 +1,6 @@
-import java.io.Console;
 import java.util.Scanner;
 
-public class Hotel {
+public class hotel {
   public static void main(String[] args){
     //Used to read integers from console
     Scanner numInput = new Scanner(System.in);
@@ -39,9 +38,6 @@ public class Hotel {
       //Adding number of rooms and filled rooms to the total
       totalRooms += tempRooms;
       totalFilledRooms += tempFilledRooms;
-
-      //Calculating occupancy rate on the floor
-      double tempOccupancy = tempFilledRooms/ tempRooms;
     }
     //Final output
     double totalOccupanyRate;
@@ -49,5 +45,7 @@ public class Hotel {
     System.out.printf("The hotel has a total of %2.0f number of rooms.\n", totalRooms);
     System.out.printf("The hotel has a total of %2.0f number of filled rooms.\n", totalFilledRooms);
     System.out.printf("The total occupancy rate is %3.2f percent.\n", totalOccupanyRate);
+
+    numInput.close();
   }
 }

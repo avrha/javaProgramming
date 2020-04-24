@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class lab4{
+public class primeLocater{
   public static boolean isPrime(int num){
     //flag variable is used to identify if the number is a prime.
     boolean flag = false;
